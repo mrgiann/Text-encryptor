@@ -1,6 +1,11 @@
 body {
   background-color: rgb(196, 196, 196);
   font-family: Poppins;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Asegura que el cuerpo cubra al menos toda la altura de la ventana */
 }
 
 .container {
@@ -8,11 +13,13 @@ body {
   flex-direction: column;
   align-items: center;
   margin-top: 50px;
+  margin-bottom: 50px;
+  flex: 1; /* Hace que ocupe todo el espacio disponible verticalmente */
 }
 
 input[type="text"] {
   width: 400px;
-  height: 400px;
+  height: 330px;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -21,18 +28,18 @@ input[type="text"] {
   text-align: center;
 }
 
-button{
+button {
   padding: 10px;
   border-radius: 10px;
   color: white;
   font-family: Poppins;
 }
 
-button#encriptar{
+button#encriptar {
   background-color: blue;
 }
 
-button#desencriptar{
+button#desencriptar {
   background-color: rgb(255, 0, 0);
 }
 
@@ -47,4 +54,26 @@ button#desencriptar{
 
 h1 {
   text-align: center;
+  margin-bottom: 0;
+}
+
+footer {
+  padding: 1rem 10rem 1rem 10rem;
+  text-align: center;
+  background-color: #363636;
+  color: white;
+}
+
+.icono-hover {
+  position: relative;
+  display: inline-block;
+  transition: transform 0.3s ease-in-out;
+}
+
+.icono-hover:hover {
+  transform: translateY(-5px);
+}
+
+.icono-hover i.fa-github {
+  font-size: 30px;
 }
